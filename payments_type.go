@@ -101,31 +101,31 @@ const (
 )
 
 type Sale struct {
-	Id                        string              `json:"id,omitempty"`
-	PurchaseUnitReferenceId   string              `json:"purchase_unit_reference_id,omitempty"`
-	Amount                    *Amount             `json:"amount,omitempty"`
-	PaymentMode               string              `json:"payment_mode,omitempty"`
-	State                     SaleState           `json:"state,omitempty"`
-	ReasonCode                string              `json:"reason_code,omitempty"`
-	ProtectionEligibility     string              `json:"protection_eligibility,omitempty"`
-	ProtectionEligibilityType string              `json:"protection_eligibility_type,omitempty"`
-	ClearingTime              string              `json:"clearing_time,omitempty"`
-	PaymentHoldStatus         string              `json:"payment_hold_status,omitempty"`
-	PaymentHoldReasons        []PaymentHoldReason `json:"payment_hold_reasons,omitempty"`
-	TransactionFee            *Currency           `json:"transaction_fee,omitempty"`
-	ReceivableAmount          *Currency           `json:"receivable_amount,omitempty"`
-	ExchangeRate              string              `json:"exchange_rate,omitempty"`
-	FMFDetails                *FMFDetails         `json:"fmf_details,omitempty"`
-	ReceiptId                 string              `json:"receipt_id,omitempty"`
-	ParentPayment             string              `json:"parent_payment,omitempty"`
-	ProcessorResponse         *ProcessorResponse  `json:"processor_response,omitempty"`
-	BillingAgreementId        string              `json:"billing_agreement_id,omitempty"`
-	CreateTime                string              `json:"create_time,omitempty"`
-	UpdateTime                string              `json:"update_time,omitempty"`
-	Links                     []*Link             `json:"links,omitempty,omitempty"`
-	InvoiceNumber             string              `json:"invoice_number,omitempty"`
-	Custom                    string              `json:"custom,omitempty"`
-	SoftDescriptor            string              `json:"soft_descriptor,omitempty"`
+	Id                        string             `json:"id,omitempty"`
+	PurchaseUnitReferenceId   string             `json:"purchase_unit_reference_id,omitempty"`
+	Amount                    *Amount            `json:"amount,omitempty"`
+	PaymentMode               string             `json:"payment_mode,omitempty"`
+	State                     SaleState          `json:"state,omitempty"`
+	ReasonCode                string             `json:"reason_code,omitempty"`
+	ProtectionEligibility     string             `json:"protection_eligibility,omitempty"`
+	ProtectionEligibilityType string             `json:"protection_eligibility_type,omitempty"`
+	ClearingTime              string             `json:"clearing_time,omitempty"`
+	PaymentHoldStatus         string             `json:"payment_hold_status,omitempty"`
+	PaymentHoldReasons        interface{}        `json:"payment_hold_reasons,omitempty"`
+	TransactionFee            *Currency          `json:"transaction_fee,omitempty"`
+	ReceivableAmount          *Currency          `json:"receivable_amount,omitempty"`
+	ExchangeRate              string             `json:"exchange_rate,omitempty"`
+	FMFDetails                *FMFDetails        `json:"fmf_details,omitempty"`
+	ReceiptId                 string             `json:"receipt_id,omitempty"`
+	ParentPayment             string             `json:"parent_payment,omitempty"`
+	ProcessorResponse         *ProcessorResponse `json:"processor_response,omitempty"`
+	BillingAgreementId        string             `json:"billing_agreement_id,omitempty"`
+	CreateTime                string             `json:"create_time,omitempty"`
+	UpdateTime                string             `json:"update_time,omitempty"`
+	Links                     []*Link            `json:"links,omitempty,omitempty"`
+	InvoiceNumber             string             `json:"invoice_number,omitempty"`
+	Custom                    string             `json:"custom,omitempty"`
+	SoftDescriptor            string             `json:"soft_descriptor,omitempty"`
 }
 
 type PaymentHoldReason struct {
